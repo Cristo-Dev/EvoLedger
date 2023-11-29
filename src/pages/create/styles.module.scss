@@ -1,0 +1,20 @@
+.kycContainer {
+  font: 600 20px/1.5 sans-serif; /* Combina tamaño de fuente, peso y línea */
+  letter-spacing: 0.5px;
+}
+
+.kycContainer p {
+  margin-bottom: 20px;
+}
+
+.motion {
+  opacity: 1;
+  transform: none;
+  width: 150px;
+  cursor: pointer;
+}
+
+.avatarContainer {
+  border-radius: var(--main-border-radius);
+  align-self: center;
+}

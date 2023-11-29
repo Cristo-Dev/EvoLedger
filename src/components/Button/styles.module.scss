@@ -1,0 +1,38 @@
+.button {
+  background-color: #6c757d; 
+  color: white; 
+  display: grid;
+  place-content: center;
+  padding: 12px 14px;
+  border-radius: var(--main-border-radius);
+  border: 0;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: var(--orbitron-font);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s linear, box-shadow 0.2s linear; 
+
+  &:hover {
+    transform: scale(1.03); 
+    background-color: #5a6268; 
+    box-shadow: rgb(60 64 67) 0px 4px 15px 0px; 
+  }
+
+  &:active {
+    background-color: #545b62; 
+    box-shadow: rgb(60 64 67) 0px 0px 0px 0px;
+    transform: scale(0.97); 
+    transition: transform 100ms, box-shadow 100ms; 
+  }
+}
+
+.filled {
+  background: var(--main-color);
+  color: black;
+}
+
+.outline {
+  background: black;
+  color: var(--main-color);
+}
