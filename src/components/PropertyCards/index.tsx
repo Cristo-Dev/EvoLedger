@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { Button } from '@nextui-org/button';
 import { Tab, Tabs } from '@nextui-org/tabs';
 
-import { useArwaUser } from '@/hooks/blockchain/manager/use-arwa-user';
+import { useUser } from '@/hooks/blockchain/manager/use-user';
 import { useFilterCards } from '@/hooks/interface/use-filter-cards';
 
 import CardProfile from '../CardProfile';
@@ -11,7 +11,7 @@ import CardProfile from '../CardProfile';
 const PropertyCards = (): JSX.Element => {
   const { push } = useRouter();
   const [isClient, setIsClient] = useState(false);
-  const { userProperties, isVerifier } = useArwaUser();
+  const { userProperties, isVerifier } = useUser();
 
   const [category, setCategory] = useState('0');
 

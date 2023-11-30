@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 
 import { PropertyStatus, PropertyType } from '@/data';
 
-import { useArwaUser } from '../blockchain/manager/use-arwa-user';
+import { useUser } from '../blockchain/manager/use-user';
 
 export const useFilterCards = (category: string): PropertyType[] => {
-  const { verifierProperties } = useArwaUser();
+  const { verifierProperties } = useUser();
 
   const [property, setProperty] = useState<PropertyType[]>(verifierProperties);
 

@@ -5,19 +5,19 @@ export type AddressType = `0x${string}`;
 export type BlockchainConstantsType = {
   5: {
     kyc: AddressType;
-    arwaManager: AddressType;
+    Manager: AddressType;
   };
   5001: {
     kyc: AddressType;
-    arwaManager: AddressType;
+    Manager: AddressType;
   };
   '534351': {
     kyc: AddressType;
-    arwaManager: AddressType;
+    Manager: AddressType;
   };
   8217: {
     kyc: AddressType;
-    arwaManager: AddressType;
+    Manager: AddressType;
   };
 };
 

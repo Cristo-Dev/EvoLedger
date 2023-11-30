@@ -1,6 +1,6 @@
 import { Abi } from 'viem';
 
-export const ArwaManagerAbi: Abi = [
+export const ManagerAbi: Abi = [
   {
     inputs: [
       {
@@ -80,7 +80,7 @@ export const ArwaManagerAbi: Abi = [
       },
       {
         // eslint-disable-next-line sonarjs/no-duplicate-string
-        internalType: 'enum ArwaManager.Status',
+        internalType: 'enum Manager.Status',
         name: 'status',
         type: 'uint8',
       },
@@ -115,7 +115,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
           {
-            internalType: 'enum ArwaManager.Status',
+            internalType: 'enum Manager.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -130,7 +130,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
         ],
-        internalType: 'struct ArwaManager.Property',
+        internalType: 'struct Manager.Property',
         name: '',
         type: 'tuple',
       },
@@ -188,7 +188,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
           {
-            internalType: 'enum ArwaManager.Status',
+            internalType: 'enum Manager.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -203,7 +203,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
         ],
-        internalType: 'struct ArwaManager.Property[]',
+        internalType: 'struct Manager.Property[]',
         name: '',
         type: 'tuple[]',
       },
@@ -249,7 +249,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
           {
-            internalType: 'enum ArwaManager.Status',
+            internalType: 'enum Manager.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -264,7 +264,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
         ],
-        internalType: 'struct ArwaManager.Property',
+        internalType: 'struct Manager.Property',
         name: '',
         type: 'tuple',
       },
@@ -321,7 +321,7 @@ export const ArwaManagerAbi: Abi = [
         type: 'address',
       },
       {
-        internalType: 'enum ArwaManager.Status',
+        internalType: 'enum Manager.Status',
         name: 'status',
         type: 'uint8',
       },
@@ -377,7 +377,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
           {
-            internalType: 'enum ArwaManager.Status',
+            internalType: 'enum Manager.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -392,7 +392,7 @@ export const ArwaManagerAbi: Abi = [
             type: 'address',
           },
         ],
-        internalType: 'struct ArwaManager.Property[]',
+        internalType: 'struct Manager.Property[]',
         name: '',
         type: 'tuple[]',
       },

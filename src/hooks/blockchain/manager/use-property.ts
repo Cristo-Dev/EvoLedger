@@ -3,8 +3,8 @@ import { readContract, writeContract } from '@wagmi/core';
 import { readContracts, useAccount, useNetwork } from 'wagmi';
 
 import { AddressType, BlockchainConstants, PropertyType } from '@/data';
-import { ArwaManagerAbi } from '@/data/abi/arwa-manager.abi';
-import { ArwaPropertyAbi } from '@/data/abi/arwa-property.abi';
+import { ManagerAbi } from '@/data/abi/manager.abi';
+import { PropertyAbi } from '@/data/abi/property.abi';
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useProperty = () => {
@@ -19,8 +19,8 @@ export const useProperty = () => {
       const { hash } = await writeContract({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
-        address: BlockchainConstants[String(chain?.id) || '5'].arwaManager,
-        abi: ArwaManagerAbi,
+        address: BlockchainConstants[String(chain?.id) || '5'].Manager,
+        abi: ManagerAbi,
         functionName: 'createPropertyRequest',
         account: account.address,
         args: [name, docs, symbol],
@@ -37,8 +37,8 @@ export const useProperty = () => {
       const data = await readContract({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
-        address: BlockchainConstants[String(chain?.id) || '5'].arwaManager,
-        abi: ArwaManagerAbi,
+        address: BlockchainConstants[String(chain?.id) || '5'].Manager,
+        abi: ManagerAbi,
         functionName: 'getPropertyById',
         account: account.address,
         args: [id],
@@ -55,7 +55,7 @@ export const useProperty = () => {
       //@ts-ignore
       const { hash } = await writeContract({
         address: collectionAddress,
-        abi: ArwaPropertyAbi,
+        abi: PropertyAbi,
         functionName: 'mint',
         account: account.address,
         args: [supply],
@@ -73,12 +73,12 @@ export const useProperty = () => {
         contracts: [
           {
             address: collectionAddress,
-            abi: ArwaPropertyAbi,
+            abi: PropertyAbi,
             functionName: 'maxSupply',
           },
           {
             address: collectionAddress,
-            abi: ArwaPropertyAbi,
+            abi: PropertyAbi,
             functionName: 'propertryPrice',
           },
         ],

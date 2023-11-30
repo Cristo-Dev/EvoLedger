@@ -7,7 +7,7 @@ import "@openzeppelin/contracts@4.4.1/token/ERC721/extensions/ERC721URIStorage.s
 import "@openzeppelin/contracts@4.4.1/token/ERC721/extensions/ERC721Burnable.sol";
 import "@openzeppelin/contracts@4.4.1/access/Ownable.sol";
 
-contract ArwaProperty is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Burnable, Ownable {
+contract Property is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Burnable, Ownable {
 
   uint256 public maxSupply = 0;
   uint256 public propertryPrice;

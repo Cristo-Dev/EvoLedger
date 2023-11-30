@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import Arwa from '../../../public/assets/main-page.png';
+import Logo from '../../../public/assets/main-page.png';
 import { Button } from '../Button';
 
 import styles from './styles.module.scss';
@@ -16,7 +16,7 @@ const Main: React.FC = () => {
 
   return (
     <div className={styles.main}>
-      <Image className={styles.main_image} src={Arwa} alt={'Arwa'} />
+      <Image className={styles.main_image} src={Logo} alt={'Logo'} />
       <div className={styles.buttonContainer}>
         <span>Start your journey now!</span>
         <Button color="white" onClick={go('/create')}>

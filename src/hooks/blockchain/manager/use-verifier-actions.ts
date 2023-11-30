@@ -3,7 +3,7 @@ import { writeContract } from '@wagmi/core';
 import { useAccount, useNetwork } from 'wagmi';
 
 import { BlockchainConstants, PropertyStatus } from '@/data';
-import { ArwaManagerAbi } from '@/data/abi/arwa-manager.abi';
+import { ManagerAbi } from '@/data/abi/manager.abi';
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useVerifierActions = () => {
@@ -17,8 +17,8 @@ export const useVerifierActions = () => {
       const { hash } = await writeContract({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
-        address: BlockchainConstants[String(chain?.id) || '5'].arwaManager,
-        abi: ArwaManagerAbi,
+        address: BlockchainConstants[String(chain?.id) || '5'].Manager,
+        abi: ManagerAbi,
         functionName: 'createPropertyCollection',
         account: account.address,
         args: [id, Number(price.toFixed(0))],
@@ -35,8 +35,8 @@ export const useVerifierActions = () => {
       const { hash } = await writeContract({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
-        address: BlockchainConstants[String(chain?.id) || '5'].arwaManager,
-        abi: ArwaManagerAbi,
+        address: BlockchainConstants[String(chain?.id) || '5'].Manager,
+        abi: ManagerAbi,
         functionName: 'updatePropertyState',
         account: account.address,
         args: [id, PropertyStatus.Rejected],

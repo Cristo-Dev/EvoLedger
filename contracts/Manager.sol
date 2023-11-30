@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 
 import "./KycStore.sol";
-import "./ArwaProperty.sol";
+import "./Property.sol";
 
-contract ArwaManager {
+contract Manager {
 
   address propertyItemAddress;
   address public kycManager;
@@ -116,7 +116,7 @@ contract ArwaManager {
     bool isAbleToUpdate = userProperty.verifier == msg.sender || (userProperty.verifier == address(0) && verifier[msg.sender]);
     require(isAbleToUpdate, "Cannot create property collection!");
 
-    ArwaProperty prop = new ArwaProperty(userProperty.name, userProperty.symbol, userProperty.owner, userProperty.docs, priceInWei);
+    Property prop = new Property(userProperty.name, userProperty.symbol, userProperty.owner, userProperty.docs, priceInWei);
     address propertyAddress = address(prop);
     userProperty.collectionAddress = propertyAddress;
     userProperty.verifier = msg.sender;

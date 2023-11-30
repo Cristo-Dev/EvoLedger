@@ -1,6 +1,6 @@
 import { Abi } from 'viem';
 
-export const ArwaPropertyAbi: Abi = [
+export const PropertyAbi: Abi = [
   {
     inputs: [
       {
